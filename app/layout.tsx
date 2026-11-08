@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Providers from "./providers";
 import Header from "@/components/Header";
 import styles from "./layout.module.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Analytics />
         </Providers>
       </body>
     </html>
