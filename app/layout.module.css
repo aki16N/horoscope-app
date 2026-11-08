@@ -1,0 +1,18 @@
+.page {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    180deg,
+    #07132c 0%,
+    #1d2150 50%,
+    #452a74 100%
+  );
+
+  background-repeat: no-repeat;
+
+  color: white;
+}
+
+.page * {
+  box-sizing: border-box;
+}

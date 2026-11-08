@@ -1,0 +1,25 @@
+.field{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 3s infinite;
+}
+
+/*
+実際はJSで
+random positionを渡す
+*/
+@keyframes twinkle{
+    50%{
+        opacity:0.3;
+        transform:scale(2);
+    }
+}

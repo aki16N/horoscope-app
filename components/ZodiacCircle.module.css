@@ -1,0 +1,26 @@
+.circle {
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    border:1px solid rgba(255,215,100,.5);
+    animation:rotate 40s linear infinite;
+}
+
+.sign {
+    position:absolute;
+    left:50%;
+    top:50%;
+    color:#ffd86b;
+    font-size:40px;
+    transform-origin:center 250px;
+}
+
+@keyframes rotate {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}

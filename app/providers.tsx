@@ -8,11 +8,9 @@ export default function Providers({
   children: React.ReactNode;
 }) {
   return (
-    // <SessionProvider>
-      <>
+    <SessionProvider>
         {children}
-      </>
-    // </SessionProvider>
+    </SessionProvider>
   );
 }
 

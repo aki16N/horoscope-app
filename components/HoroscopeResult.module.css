@@ -1,0 +1,117 @@
+.resultMain {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  padding: 3rem 5%;
+  box-sizing: border-box;
+}
+
+.rankingTable {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.resultBar {
+  width: 100%;
+}
+
+.rankingPyramid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pyramid {
+  width: min(90vw, 400px);
+  margin: 0 auto;
+}
+
+.pyramidSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* マーカー */
+.pyramidMarker {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* あなた */
+.myMarkerIcon {
+  width: 16px;
+  height: 16px;
+
+  background: #ffc107;
+  border: 2px solid white;
+  clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 100%,
+      50% 73%,
+      21% 100%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+  );
+
+  margin: 0 auto;
+}
+
+.myMarkerIcon small {
+  color: black;
+}
+
+.myMarker {
+  color: #212529;
+}
+
+/* 平均 */
+.averageMarker {
+  margin-top: 35px;
+}
+
+.averageMarker small {
+  color: black;
+}
+
+.averageDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0d6efd;
+  border: 2px solid white;
+}
+
+/* 順位表示 */
+.pyramidRanks {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.pyramidRanks small {
+  position: relative;
+  z-index: 3;
+  width: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  padding: 2px 5px;
+}

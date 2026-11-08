@@ -1,0 +1,23 @@
+.header {
+    background:
+        linear-gradient(
+            180deg,
+            #03051c 0%,
+            #0a0b2d 60%,
+            #10104a 100%
+        );
+    border-bottom: 1px solid rgba(255, 216, 107, 0.45);
+    box-shadow:
+        0 2px 20px rgba(0, 0, 0, 0.45);
+    min-height: 64px;
+}
+
+.brand {
+    color:white !important;
+    text-shadow:
+    0 0 20px white;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}

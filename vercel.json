@@ -1,0 +1,9 @@
+
+{
+  "crons": [
+    {
+      "path": "/api/cron/daily-fortune",
+      "schedule": "0 15 * * *"
+    }
+  ]
+}

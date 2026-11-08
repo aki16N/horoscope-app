@@ -1,0 +1,240 @@
+.main {
+  min-height:100vh;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+  radial-gradient(
+    circle at top,
+    #38206f,
+    transparent 40%
+  ),
+  linear-gradient(
+    180deg,
+    #03051c,
+    #10104a,
+    #5b2b82
+  );
+}
+
+.container {
+   position: relative;
+   z-index: 10;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* 中央カード */
+.card {
+  position:relative;
+  z-index:10;
+  width:420px;
+  padding:80px 50px;
+  text-align:center;
+  border-radius:30px;
+  background:
+  rgba(20,20,80,0.55);
+  backdrop-filter:blur(15px);
+  border:
+  1px solid rgba(255,215,100,.6);
+  box-shadow:
+  0 0 40px rgba(255,215,100,.25);
+}
+
+/* 星座マーク */
+.zodiacIcon {
+  overflow: hidden;
+  width:120px;
+  height:120px;
+  margin:-130px auto 30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  font-size:60px;
+  color:#ffd86b;
+  background:#07072b;
+  border:
+  2px solid #ffd86b;
+  box-shadow:
+  0 0 30px gold;
+}
+
+/* 現在の星座が右へ抜ける */
+.zodiacExit {
+  animation: zodiacExit 0.5s ease-in forwards;
+}
+
+/* 次の星座が左から中央へ入る */
+.zodiacEnter {
+  animation: zodiacEnter 0.5s ease-out forwards;
+}
+
+.zodiacSlide {
+  animation: zodiacSlide 0.5s ease-in-out;
+}
+
+/*
+現在の星座
+中央 → 右
+1 → 0
+*/
+@keyframes zodiacExit {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+
+/*
+次の星座
+左 → 中央
+0 → 1
+*/
+@keyframes zodiacEnter {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.zodiac {
+  position: absolute;
+
+  font-size: 60px;
+  color: #ffd86b;
+}
+
+.subtitle {
+ color:#f5d88b;
+ font-size:22px;
+ letter-spacing:5px;
+}
+
+.title {
+ color:white;
+ font-size:50px;
+ letter-spacing:10px;
+ margin:20px 0;
+ text-shadow:
+ 0 0 20px white;
+}
+
+.divider {
+ color:#ffd86b;
+ margin:20px;
+}
+
+.description {
+ color:white;
+ font-size:20px;
+}
+
+.button {
+ margin-top:40px;
+ width:250px;
+ height:75px;
+ border-radius:50px;
+ border:none;
+ font-size:30px;
+ color:#442600;
+ background:
+ linear-gradient(
+ 135deg,
+ #fff0a8,
+ #e8a900
+ );
+ box-shadow:
+ 0 0 30px rgba(255,215,0,.7);
+ cursor:pointer;
+ transition:.3s;
+}
+
+.button:hover {
+ transform:scale(1.08);
+ box-shadow:
+ 0 0 50px gold;
+}
+
+/* 待機アニメーション */
+.loadingOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(3, 5, 28, 0.82);
+  backdrop-filter: blur(6px);
+}
+
+.loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.magicSquare {
+  width: 180px;
+  height: 180px;
+
+  filter:
+      drop-shadow(0 0 5px #ffd86b)
+      drop-shadow(0 0 15px rgba(255, 216, 107, 0.7));
+
+  animation:
+      magicRotate 4s linear infinite;
+}
+
+@keyframes magicRotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  margin-top: 25px;
+
+  color: #ffd86b;
+
+  font-size: 1rem;
+
+  letter-spacing: 0.15em;
+
+  text-shadow:
+      0 0 10px rgba(255, 216, 107, 0.8),
+      0 0 20px rgba(255, 216, 107, 0.4);
+
+  animation: loadingTextPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingTextPulse {
+  0%,
+  100% {
+      opacity: 0.5;
+  }
+
+  50% {
+      opacity: 1;
+  }
+}
